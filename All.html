@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <link rel="stylesheet" href="app.css" />
+ 
+ 
+
+  <title>World of Tourism</title>
+ 
+
+
+ 
+  <body style="margin: 0px; overflow: hidden">
+
+  
+    
+    <div id="marker-image">
+      <img src="./images/Group 4.png" id="marker-loader" alt="" />
+    </div>
+
+    <div id="logo_base">
+      <img src="./images/LOGO.png" id="logo" alt="" />
+    </div>
+
+    <div id="navigation">
+       
+      <a href="Index.html">
+        <img  src="./images//Tajmahal.jpg"  class="menu_item Tajmahal"  alt=""/>
+      </a>
+      <a href="Elephant.html">
+        <img src="./images//Elemenu.jpg" class="menu_item Elephant" alt="" />
+      </a>
+      <a href="All.html">
+        <img  src="./images//All.png"  class="menu_item All   "  alt=""/>
+      </a>
+      <a href="Turtle.html">
+        <img  src="./images//Turtle.jpg"  class="menu_item Turtle"  alt=""/>
+      </a>
+      <a href="Coral.html">
+        <img  src="./images//coral.jpg"  class="menu_item Coral   "  alt=""/>
+      </a>
+      
+
+    </div>
+
+    <!----Muhassan | IT19212050 ------------------------------------------------------>
+    <a-scene  embedded  vr-mode-ui="enabled: false;"  arjs="debugUIEnabled: false;" >
+      <a-marker id="marker" type='pattern' url='./Markers/pattern-Tajmahal.patt'>
+
+          <a-entity   gltf-model="url(./Models/TajMahal/scene.gltf)"   scale="2 2 2"   rotation="0 0 0" 
+          position="-0.4 0 0"    >
+          </a-image>
+         <a-entity
+         gltf-model="url(./Models/Elephants/scenes.gltf)"
+         scale="0.2 0.2 0.2"
+         position="1 0 0"
+         rotation="0 0 0"
+         animation-mixer
+       ></a-entity>
+
+       <a-entity   gltf-model="url(./Models/Turtle/scene02.gltf)"   scale="2,2,2"  \
+        rotation="0 0 0" position="0.7 0 0"    >
+       </a-entity>
+      <a-entity obj-model="obj: #biyo;" material="src: ./images/coral.png" position="0 0 0"  scale="1,1,1">
+        <a-animation attribute="rotation" to="0 180 0" dur="7000" repeat="0" ease="linear">
+      </a-entity>
+        </a-marker>
+   <a-entity camera></a-entity>
+  </a-scene>
+    
+     
+     <script src="app.js"></script>
+  </body>
+</html>

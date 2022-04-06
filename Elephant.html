@@ -7,13 +7,13 @@
  
  
 
-  <title>Eduplanet</title>
+  <title>World of Tourism</title>
  
 
  
   <body style="margin: 0px; overflow: hidden">
     
-    <div id="marker">
+    <div id="marker-image">
       <img src="./images/Group 4.png" id="marker-loader" alt="" />
     </div>
 
@@ -22,11 +22,15 @@
     </div>
 
     <div id="navigation">
+      
       <a href="Index.html">
         <img  src="./images//Tajmahal.jpg"  class="menu_item Tajmahal"  alt=""/>
       </a>
       <a href="Elephant.html">
         <img src="./images//Elemenu.jpg" class="menu_item Elephant" alt="" />
+      </a>
+      <a href="All.html">
+        <img  src="./images//All.png"  class="menu_item All   "  alt=""/>
       </a>
       <a href="Turtle.html">
         <img  src="./images//Turtle.jpg"  class="menu_item Turtle"  alt=""/>
@@ -34,11 +38,12 @@
       <a href="Coral.html">
         <img  src="./images//coral.jpg"  class="menu_item Coral   "  alt=""/>
       </a>
+      
     </div>
     <a-scene embedded arjs>
-      <a-marker type="pattern" url="./Markers/sh1.patt">
+      <a-marker id="marker" type="pattern" url="./Markers/sh1.patt">
         <a-entity
-          gltf-model="url(./Models/Elephants/scene.gltf)"
+          gltf-model="url(./Models/Elephants/scenes.gltf)"
           scale="0.8 0.8 0.8"
           position="0 0 0"
           rotation="0 -90 0"
@@ -60,5 +65,7 @@
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+
+    <script src="app.js"></script>
   </body>
 </html>

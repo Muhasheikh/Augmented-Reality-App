@@ -14,7 +14,7 @@
  
   <body style="margin: 0px; overflow: hidden">
     
-    <div id="marker">
+    <div id="marker-image">
       <img src="./images/Group 4.png" id="marker-loader" alt="" />
     </div>
 
@@ -23,11 +23,15 @@
     </div>
 
     <div id="navigation">
+     
       <a href="Index.html">
         <img  src="./images//Tajmahal.jpg"  class="menu_item Tajmahal"  alt=""/>
       </a>
       <a href="Elephant.html">
         <img src="./images//Elemenu.jpg" class="menu_item Elephant" alt="" />
+      </a>
+      <a href="All.html">
+        <img  src="./images//All.png"  class="menu_item All   "  alt=""/>
       </a>
       <a href="Turtle.html">
         <img  src="./images//Turtle.jpg"  class="menu_item Turtle"  alt=""/>
@@ -38,15 +42,15 @@
     </div>
     
     <a-scene  embedded  vr-mode-ui="enabled: false;"  arjs="debugUIEnabled: false;" >
-      <a-marker preset="hiro">
+      <a-marker id="marker" type='pattern' url='./Markers/pattern-Tajmahal.patt'>
 
 
-          <a-entity   gltf-model="url(./Models/Turtle/scene.gltf)"   scale="5 5 5"   rotation="0 180 0" position="0 0 0"    >
+          <a-entity   gltf-model="url(./Models/Turtle/scene02.gltf)"   scale="5 5 5"   rotation="0 180 0" position="0 0 0"    >
             <a-animation   attribute="rotation"   
           easing="linear"   dur="10000"   to="0 0 0"   repeat="indefinite" ></a-animation>
           </a-entity>
   
-          
+        
         </a-marker>
   
         <a-entity camera></a-entity>
@@ -54,7 +58,7 @@
 
      
   
-
+      <script src="app.js"></script>
 
  
   </body>

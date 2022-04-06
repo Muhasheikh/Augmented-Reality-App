@@ -7,28 +7,32 @@
 
   
 
-    #marker , #marker-loader{
-      z-index:890;
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-50%);
-      width:200px;
-      height:200px;
-      opacity:0.6;
-      
-    }
+   
 
-    #marker::after{
-      position: absolute;
-      bottom: -30px;
-      content: 'place your marker';
-      text-align: center;
-      font-size:16px;
-      color:#fff;
-      width:100%;
+  #marker-image  , #marker-loader{
+    z-index:890;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:200px;
+    height:200px;
+    opacity:0.6;
+  
     
-    }
+  }
+
+  #marker-image ::after{
+    position: absolute;
+    bottom: -23px;
+    content: 'place your marker';
+    text-align: center;
+    font-size:16px;
+    color:#fff;
+    width:100%;
+  
+  }
+
 
     #logo {
       position: absolute;
@@ -42,14 +46,14 @@
    
 
     #navigation {
-      width: 450px;
+      width: 600px;
       height: 80px;
       
       position: absolute;
       left: 50%;
       bottom: 5%;
       transform: translateX(-50%);
-      border-radius: 100px;
+      border-radius: 10px;
       background: rgba(255, 255, 255, 0.3);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(9px);
@@ -71,22 +75,12 @@
       border-radius: 50px;
       height: 100px;
     }
-    .mars {
+    .Tajmahal {
       width: 70px;
     }
 
-    .Tajmahal {
-      width: 100px;
-      
-    }
-    .Tajmahal {
-      width: 100px;
-           
-    }
-    .Tajmahal{
-      width: 100px;
-      
-    }
+   
+   
 
     .menu_item:hover {
       transform: scale(1.2);
